@@ -144,6 +144,11 @@ h2 {
     gap: 0.2rem;
 }
 
+.fundamentals-image {
+    border: 1px solid #6792cb;
+    margin-block: 2rem;
+}
+
 .idea-body, 
 .body-copy {
     font-size: 1.2rem;
