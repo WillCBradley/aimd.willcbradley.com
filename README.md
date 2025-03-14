@@ -1,1 +1,1 @@
-willcbradley.com/ai
+turingmd.com
