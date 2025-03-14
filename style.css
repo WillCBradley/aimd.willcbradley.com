@@ -31,6 +31,11 @@ img {
     max-width: 100%;
 }
 
+.back-arrow {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
 button {
     font-family: inherit;
     background-color: none;
@@ -128,6 +133,11 @@ h2 {
     border-color: #6792cb;
 }
 
+.contact-btn {
+    grid-row: 1/2;
+    grid-column: 2/5;
+}
+
 .dot-point {
     line-height: 1.15;
     margin-bottom: 0;
@@ -152,9 +162,29 @@ h2 {
     gap: 1rem;
 }
 
+.footer-grid {
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 100px;
+    margin-top: 3rem;
+}
+
+.forward-arrow {
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+}
+
 .fundamentals-image {
     border: 1px solid #6792cb;
     margin-block: 2rem;
+}
+
+.grid {
+    display: grid;
 }
 
 .idea-body, 
@@ -192,6 +222,12 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.notified-btn {
+    grid-row: 2/3;
+    grid-column: 1/6;
+
 }
 
 .sell-card {
@@ -253,11 +289,9 @@ h2 {
 
 .subscribe {
     font-size: 1.2rem;
-    text-align: left;
-    flex: 1;
+    text-align: center;
     border: 2px solid #6792cb;
     color: #6792cb;
-    margin-top: 2rem;
     border-radius: 5px;
     padding : 0.5rem 1rem;
     background: linear-gradient(to left, #fff 50%, #6792cb 50%) right;
