@@ -16,7 +16,7 @@
 
 a {
     text-decoration: none;
-    color: #6792cb;
+    color: #679f69;
 }
 
 .idea-body > a.build-color {
@@ -87,8 +87,8 @@ h2 {
     font-size: 1.2rem;
     text-align: left;
     flex: 1;
-    border: 2px solid #6792cb;
-    color: #6792cb;
+    border: 2px solid #679f69;
+    color: #679f69;
     border-radius: 5px;
     padding : 2.4rem 2rem;
     background: linear-gradient(to left, #fff 50%, #474747 50%) right;
@@ -111,26 +111,26 @@ h2 {
     font-size: 1.2rem;
     text-align: left;
     flex: 1;
-    border: 2px solid #6792cb;
-    color: #6792cb;
+    border: 2px solid #679f69;
+    color: #679f69;
     border-radius: 5px;
     padding : 2.4rem 2rem;
-    background: linear-gradient(to left, #fff 50%, #6792cb 50%) right;
+    background: linear-gradient(to left, #fff 50%, #679f69 50%) right;
     background-size: 200%;
     transition: all 0.5s cubic-bezier(0.42, 0, 0.23, 1);
 }
 
 .card:hover {
     color: #fff;
-    border-color: #6792cb;
+    border-color: #679f69;
     background-position: left;
     text-decoration: none;
 }
 
 .card:active {
-    background-color: #6792cb;
+    background-color: #679f69;
     color: #fff;
-    border-color: #6792cb;
+    border-color: #679f69;
 }
 
 .contact-btn {
@@ -164,6 +164,9 @@ h2 {
 
 .footer-grid {
     display: grid;
+    flex-shrink: 0; /* prevent shrinking */
+    padding-inline: 1rem;
+    background-color: white;
     grid-gap: 0.25rem;
     grid-template-rows: 50% 50%;
     grid-template-columns: 15.5% 15.5% 15.5% 15.5% 15.5% 15.5%;
@@ -171,6 +174,8 @@ h2 {
     width: 100%;
     height: 100px;
     margin-top: 3rem;
+    position: sticky;
+    bottom: 0;
 }
 
 .forward-arrow {
@@ -179,7 +184,7 @@ h2 {
 }
 
 .fundamentals-image {
-    border: 1px solid #6792cb;
+    border: 1px solid #679f69;
     margin-block: 2rem;
 }
 
@@ -202,7 +207,7 @@ h2 {
 }
 
 .index-title {
-    color: #6792cb;
+    color: #679f69;
     font-size: 3rem;
     letter-spacing: -0.05em;
     margin-bottom: 0.8rem;
@@ -264,8 +269,8 @@ h2 {
     font-size: 1.2rem;
     text-align: left;
     flex: 1;
-    border: 2px solid #6792cb;
-    color: #6792cb;
+    border: 2px solid #679f69;
+    color: #679f69;
     border-radius: 5px;
     padding : 2.4rem 2rem;
     background: linear-gradient(to left, #fff 50%, #A1762B 50%) right;
@@ -294,84 +299,33 @@ h2 {
 .subscribe {
     font-size: 1.2rem;
     text-align: center;
-    border: 2px solid #6792cb;
-    color: #6792cb;
+    border: 2px solid #679f69;
+    color: #679f69;
     border-radius: 5px;
     padding : 0.5rem 1rem;
-    background: linear-gradient(to left, #fff 50%, #6792cb 50%) right;
-    background-size: 200%;
-    transition: all 0.5s cubic-bezier(0.42, 0, 0.23, 1);
-}
-
-.subscribe-build {
-    font-size: 1.2rem;
-    text-align: left;
-    flex: 1;
-    border: 2px solid #474747;
-    color: #474747;
-    margin-top: 2rem;
-    border-radius: 5px;
-    padding : 0.5rem 1rem;
-    background: linear-gradient(to left, #fff 50%, #474747 50%) right;
-    background-size: 200%;
-    transition: all 0.5s cubic-bezier(0.42, 0, 0.23, 1);
-}
-
-.subscribe-build:hover {
-    color: #fff;
-    border-color: #474747;
-    background-position: left;
-    text-decoration: none;
-}
-
-.subscribe-build:active {
-    background-color: #474747;
-    color: #fff;
-    border-color: #474747;
-}
-
-.subscribe-sell {
-    font-size: 1.2rem;
-    text-align: left;
-    flex: 1;
-    border: 2px solid #A1762B;
-    color: #A1762B;
-    margin-top: 2rem;
-    border-radius: 5px;
-    padding : 0.5rem 1rem;
-    background: linear-gradient(to left, #fff 50%, #A1762B 50%) right;
-    background-size: 200%;
-    transition: all 0.5s cubic-bezier(0.42, 0, 0.23, 1);
-}
-
-.subscribe-sell:hover {
-    color: #fff;
-    border-color: #A1762B;
-    background-position: left;
-    text-decoration: none;
-}
-
-.subscribe-sell:active {
-    background-color: #A1762B;
-    color: #fff;
-    border-color: #A1762B;
+    background-color: white;
 }
 
 .subscribe:hover {
-    color: #fff;
-    border-color: #6792cb;
-    background-position: left;
-    text-decoration: none;
+  transition: 0.2s ease;
+  background-color: #679f69;
+  /* transform: translateY(-1.5px); */
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .subscribe:active {
-    background-color: #6792cb;
-    color: #fff;
-    border-color: #6792cb;
+  transition: 0.2s ease;
+  background-color: #679f69;
+  /* transform: translateY(-1.5px); */
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .title {
-    color: #6792cb;
+    color: #679f69;
     font-size: 3rem;
     letter-spacing: -0.05em;
     margin-bottom: 0.8rem;
@@ -391,13 +345,21 @@ h2 {
 .idea-subtitle {
     font-weight: 400;
     font-size: 1.75rem;
-    color: #6792cb;
+    color: #679f69;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
 .reading-subhead {
     margin: 2rem 0 0.5rem;
+}
+
+.bigml {
+    font-size: 3rem;
+}
+
+.smallml {
+    font-size: 2.5rem;
 }
 
 @media (max-width: 500px) {
