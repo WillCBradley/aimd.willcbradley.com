@@ -50,6 +50,12 @@ h2 {
     scroll-margin-top: 10rem;
 }
 
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+}
+
 .body-container {
     width: 90%;
     margin: 0 auto;
@@ -131,6 +137,32 @@ h2 {
     background-color: #679f69;
     color: #fff;
     border-color: #679f69;
+}
+
+.card-grey {
+    font-size: 1.2rem;
+    text-align: left;
+    flex: 1;
+    border: 2px solid #a9a9a9;
+    color: #a9a9a9;
+    border-radius: 5px;
+    padding : 2.4rem 2rem;
+    background: linear-gradient(to left, #fff 50%, #a9a9a9 50%) right;
+    background-size: 200%;
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.23, 1);
+}
+
+.card-grey:hover {
+    color: #fff;
+    border-color: #a9a9a9;
+    background-position: left;
+    text-decoration: none;
+}
+
+.card-grey:active {
+    background-color: #a9a9a9;
+    color: #fff;
+    border-color: #a9a9a9;
 }
 
 .contact-btn {
