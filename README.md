@@ -1,1 +1,1 @@
-turingmd.com
+[aimd.willcbradley.com](https://aimd.willcbradley.com)
