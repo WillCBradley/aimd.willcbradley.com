@@ -21,14 +21,12 @@
             <li class="jumplink"><a href="#derivatives">Derivatives</a></li>
             <li class="jumplink"><a href="#chainrule">The Chain Rule</a></li>
             <li class="jumplink"><a href="#partial">Partial Derivatives</a></li>
-            <li class="jumplink"><a href="#integration">Integration</a></li>
-            <li class="jumplink"><a href="#fundamental">Fundamental Theorem</a></li>
         </ul>
         <hr>
 
         <h2 class="subheading" id="functions">| Functions</h2>
         <p>A function is a rule that matches inputs to outputs.</p>
-        <p>For a given function f that takes input x, we expect the output f(&#119909) (read as "f of &#119909").</p>
+        <p>A given function f that takes input x is written as f(&#119909) (or "f of &#119909").</p>
         <p>But let's use a more tangible example - mean arterial pressure. If we know a patient's systolic (S) and diastolic (D) blood pressure, we calculate their MAP as follows:</p>
         <p>MAP = <sup>2</sup>⁄<sub>3</sub>D + <sup>1</sup>⁄<sub>3</sub>S</p>
         <p>This can be rewritten as a function like so:</p>
@@ -53,12 +51,12 @@
         <p>Imagine we wanted the gradient of a single point in a function.</p>
         <p>This gives us the <i>instantaneous rate of change</i> at that point, which can be extremely important. After all, a 10-second drop in O<sub>2</sub> sats is very different to a 10-year one.</p>
         <p>But a single point is exactly that: single.</p>
-        <p>How do we calculate gradient if we don't have a no rise or run?</p>
+        <p>How do we calculate the movement of a still point?</p>
         <p>Mathematicians spent a long time trying to figure this out. And thankfully, we can copy their homework.</p>
         <p>Using certain rules, we can find the "first derivative" of any function f(&#119909), written as f'(&#119909) ("f prime of &#119909"). Then, for any input a, f'(a) gives us the single-point gradient at f(&#119909) at &#119909 = a.</p>
         <p>For each term in a function, the rules are as follows:</p>
         <ul class="tight">
-            <li>First, a term is constant (i.e. is not multiplied by a variable), remove it</li>
+            <li>First, if a term is constant (i.e. is not multiplied by the relevant variable), remove it</li>
             <li>Next, multiply each remaining term by the exponent of its associated variable value (e.g. if the term is &#119909<sup>2</sup>, multiply by 2)</li>
             <li>Lastly, subtract 1 from the exponent of each variable term (so &#119909<sup>2</sup> becomes &#119909, &#119909 becomes 1, etc).</li>
         </ul>
@@ -68,9 +66,7 @@
         <p>Then, we multiply by the remaining term by 2, since &#119909 is raised to the power of 2. This gives us 2&#119909<sup>2</sup>.</p>
         <p>And finally, we subtract 1 from the exponent of &#119909, giving us 2x<sup>1</sup>, which is the same as 2&#119909.</p>
         <p>So, for f(&#119909) = &#119909<sup>2</sup>+ 5, f'(&#119909) = 2&#119909.</p>
-        <p>If this doesn't make sense yet, don't worry.</p>
-        <p>As long as you understand that differentiation gives us the instantaneous gradient of a function, feel free to <a href="#integration">skip ahead</a>.</p>
-        <p>But if you're still with us, let's keep moving:</p>
+        <p>This is a simple example, but sometimes, things can be more tricky. And in those cases, there are some handy shortcuts:</p>
         <br>
 
         <h2 class="subheading" id="chainrule">| The Chain Rule</h2>
@@ -80,7 +76,7 @@
         <p>At first, this looks like a headache to differentiate. But luckily, there's a pretty simple rule:</p>
         <ul class="tight">
             <li>Find the derivative of the first function</li>
-            <li>Pass all the following functions as input to this derivative, and note this term down somewhere</li>
+            <li>Pass all the following functions as input to this derivative, and note this term down</li>
             <li>Repeat for the all remaining functions (e.g. for the second "layer", pass the third, fourth, fifth... functions as input to the derivative, and so on)</li>
             <li>Once you have all these terms, multiply them all together (like links in a chain; hence "chain rule")</li>
         </ul>
@@ -96,26 +92,20 @@
         <p>In all our differentiation examples so far, &#119909 has been the only variable. How do we handle multiple at once?</p>
         <p>Put simply: we don't.</p>
         <p>In all past examples, we've been <i>differentiating with respect to &#119909.</i></p>
-        <p>This is the same as choosing &#119909 for our "run" value in our gradient calculation, or using "per kilogram bodyweight" when calculating a drug dosage.</p>
+        <p>This is the same as choosing &#119909 for our "run" axis in our gradient calculation, or using "per kilogram bodyweight" when calculating a drug dosage.</p>
         <p>And while we don't always need to use &#119909, we can only choose one variable at a time.</p>
         <p>So, when differentiating with respect to a certain variable in a multivariate equation, we treat the others as constants.</p>
         <p>For example:</p>
         <p>For our function f(S, D) = <sup>2</sup>⁄<sub>3</sub>D + <sup>1</sup>⁄<sub>3</sub>S, let's find the derivative with respect to S.</p>
         <p>Since D is now constant, so is <sup>2</sup>⁄<sub>3</sub>D, so we remove this term.</p>
-        <p>All that's left is to follow the remaining steps, turning <sup>1</sup>⁄<sub>3</sub>S into <sup>1</sup>⁄<sub>3</sub>. So f'(S, D) = <sup>1</sup>⁄<sub>3</sub>.</p>
-        <p>Now that we've wrapped our head around this stuff, let's take a look at integration.</p>
-        <p><sub>a </sub>∫<sup> b</sup>〖f(x)  dx〗</p>
-        <br>
+        <p>All that's left is to follow the remaining steps, turning <sup>1</sup>⁄<sub>3</sub>S into <sup>1</sup>⁄<sub>3</sub>. So the derivative of f with respect to S (or <sup>∂f</sup>/<sub>∂S</sub>) equals <sup>1</sup>⁄<sub>3</sub>.</p>
+        <p>Now that we've wrapped our head around this stuff, let's take a look at gradient descent.</p>
 
-        <h2 class="subheading" id="integration">| Integration</h2>
-        <p>You can imagine integration as the opposite of differentiation.</p>
-
-        <br>
-
-        <h2 class="subheading" id="fundamental">| Fundamental Theorem</h2>
-        <p></p>
-        <br>
-        
+        <div class="footer-grid">
+            <a href="./linearalgebra" class="back-arrow subscribe">←</a>
+            <a href="https://willcbradley.substack.com/about" target="_blank" class="contact-btn subscribe">More Ideas</a>
+            <a href="./gradientdescent" class="forward-arrow subscribe">→</a>
+        </div>
     </div>
 </body>
 </html>
