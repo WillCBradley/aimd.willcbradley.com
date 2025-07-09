@@ -14,9 +14,53 @@
         </div>
         <h2 class="idea-subtitle">Gradient Descent</h2>
 
-        <p>This page is currently under construction.</p>
-        <p><a href="https://willcbradley.substack.com/about">Join the list</a> to be notified when the full version goes live.</p>
-        <p> - Will</p>
+        <p class="jumpto">| Jump To Section:</p>
+        <ul>
+            <li class="jumplink"><a href="#cost">Cost Functions</a></li>
+            <li class="jumplink"><a href="#gradientdescent">Gradient Descent</a></li>
+            <li class="jumplink"><a href="#lr">Learning Rate</a></li>
+        </ul>
+        <hr>
+
+        <h2 class="subheading" id="functions">| Cost Functions</h2>
+        <p>You can't correct an invisible mistake.</p>
+        <p>So, when parametric models want to learn prediction errors, they need to know what went wrong, and by how much.</p>
+        <p>To do this, we can use cost functions, which give us a mathematical representation of exactly this. There are many to choose from, but two common ones are:</p>
+        <ul>
+            <li>Mean Squared Error (often used for regression models):</li>
+            <img class="maths-img" src="./mse.png" alt="">
+            <li>Cross Entropy (often used for classification models):</li>
+            <img class="maths-img" src="./crossentropy.png" alt="">
+        </ul>
+        <p>Take-home message: the cost function tells us the "cost" of the error(s) in our model's prediction. We want to minimise it.</p>
+        <p>And to do that, we can use gradient descent:</p>
+        <br>
+
+        <h2 class="subheading" id="gradientdescent">| Gradient Descent</h2>
+        <p>Parametric cost functions minimise their cost functions by tweaking the parameters themselves.</p>
+        <p>Specifically, we take the <a href="./diffcalc#partial">partial derivative</a> of the cost function with respect to each parameter, then tweak our values accordingly.</p>
+        <p><i>(If you've forgotten about derivatives and partial derivatives, please go back over <a href="./diffcalc">this</a>).</i></p>
+        <p>To explore this process in more detail, consider the graph below:</p>
+        <img class="maths-img" src="./gradientdescent.png" alt="">
+        <p>At Point A, the derivative of this function would be negative. Therefore, we need to increase the x value (said differently: <i>subtract</i> some positive multiple of this derivative from the x value) to decrease the function.</p>
+        <p>At point B, the derivative is positive. So therefore, we need to decrease the x value (or subtract a positive multiple of the derivative from the x value) to decrease the function.</p>
+        <p>This is the essence of gradient descent.</p>
+        <p>By giving us the partial derivative of the cost function relative to a parameter, it tells us whether we need to increase or decrease that particular parameter to reduce the cost function.</p>
+        <p>In practice, there can be billions of parameters, and many-dimensional gradients need to be calculated, but the core process is the same.</p>
+        <p>Which leads us nicely onto learning rate.</p>
+        <br>
+
+        <h2 class="subheading" id="lr">| Learning Rate</h2>
+        <p>Gradient descent tells us how to change a parameter.</p>
+        <p>But it's the learning rate that tell us <i>how much to change it by.</i></p>
+        <p>Each time the model makes a prediction, it re-computes the cost function, and adjusts itself based on the learning rate specified for each individual parameter.</p>
+        <p>Mathematically, this can be written as:</p>
+        <img class="maths-img" src="./learningrate.png" alt="">
+        <p>But it's not as easy as picking a random number.</p>
+        <p>If the learning rate is too low, it'll take forever to optimise the parameters.</p>
+        <p>But if it's too high, it can miss the minimum completely, jumping to increasingly steep points on the graph until it ping-pongs far away from where it should be.</p>
+        <p>Regardless, it's time for our <a href="./neuralnetworks">final topic</a>.</p>
+        <br>
         
         <div class="footer-grid">
             <a href="./parameters" class="back-arrow subscribe">←</a>
