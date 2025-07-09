@@ -14,9 +14,38 @@
         </div>
         <h2 class="idea-subtitle">Neural Networks</h2>
 
-        <p>This page is currently under construction.</p>
-        <p><a href="https://willcbradley.substack.com/about">Join the list</a> to be notified when the full version goes live.</p>
-        <p> - Will</p>
+        <ul>
+            <li class="jumplink"><a href="#whatarethey">What Are Neural Networks?</a></li>
+            <li class="jumplink"><a href="#backprop">Backpropagation</a></li>
+            <li class="jumplink"><a href="#deeplearning">Deep Learning</a></li>
+        </ul>
+        <hr>
+
+        <h2 class="subheading" id="whatarethey">| What Are Neural Networks?</h2>
+        <p>Time to learn about a new kind of "neuron".</p>
+        <p>Instead of soma and axons, these neurons have weights and biases, just like the models we've seen before. They're arranged in layers like so:</p>
+        <img src="./neuralnetwork.png" class="maths-img" alt="">
+        <p>As you'd expect, inputs are fed into the "input layer". Each neuron applies its own parameters to this input, before running it through an activation function to produce an output.</p>
+        <p>Each neuron is connected to all neurons in adjacent layers. So the output from an input layer neuron is fed into all second-layer neurons (and so on), with weights determining the strength of connection between any two neurons.</p>
+        <p>This propagates throughout the entire network, with different neurons serving different purposes, until we reach the output layer, where a prediction is made.</p>
+        <p>From here, things start to get more familiar.</p>
+        <br>
+
+        <h2 class="subheading" id="backprop">| Backpropagation</h2>
+        <p>Like other models, neural networks can use <a href="./gradientdescent#cost">cost functions</a>.</p>
+        <p>Based on this cost function, we can perform a process known as backpropagation, applying the <a href="./diffcalc#chainrule">chain rule</a> to each layer of the neural network with respect to the relevant parameters of each neuron.</p>
+        <p>From here, we can use an optimiser (like <a href="./gradientdescent">gradient descent</a>) to tweak the parameters, just like we've seen before.</p>
+        <p>Since each neuron's output depends on all previous layers, this process runs backwards (from output to input layers), hence "backpropagation".</p>
+        <p>And now, finally, we're right at the heart of this topic:</p>
+        <br>
+
+        <h2 class="subheading" id="deeplearning">| Deep Learning</h2>
+        <p>Deep learning describes the ability of multi-hidden-layered ("deep") neural networks to learn from data.</p>
+        <p>As we've recently discovered: the more resources you throw at these models, the smarter they get. At the time of writing, humanity is yet to find the limits of this phenomenon.</p>
+        <p>This might be the most important discovery in history.</p>
+        <p>If things go well, it could commoditise intelligence, letting us solve all the biggest problems facing humanity today.</p>
+        <p>And now, at the very least, you understand the basics.</p>
+        <br>
       
         <div class="footer-grid">
             <a href="./gradientdescent" class="back-arrow subscribe">←</a>
